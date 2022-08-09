@@ -1,5 +1,6 @@
-// const Decorator = function(){
-//     this.paint_stock=[]
-// }
+const Decorator = function(name){
+    this.name = name
+    this.paint_stock=[]
+}
 
-// module.exports = Decorator;
+module.exports = Decorator;

@@ -1,7 +1,7 @@
 const assert = require('assert')
 const Paint = require('../paint.js')
 const Room = require('../room.js')
-// const Decorator = require('../decorator.js')
+const Decorator = require('../decorator.js')
 
 describe('Room', function(){
     let room;
@@ -67,7 +67,26 @@ describe ('Paint', function(){
 
         })
 
+
     })
 
+})
+
+describe ('Decorator', function(){
+    let decorator;
+
+    beforeEach(function(){
+        decorator = new Decorator ('Daniel')
+    })
+    it('should have a decorator name', function(){
+        const actual = decorator.name;
+        assert.strictEqual(actual, 'Daniel')
+    })
+    describe('paint_stock', function(){
+        it('should be able to check the stock level is empty', function(){
+            const actual = decorator.paint_stock;
+            assert.deepStrictEqual(actual, [])
+        })
+    })
 })
 
